@@ -4,10 +4,12 @@ import os
 from langchain.chat_models import ChatOpenAI
 #from langchain.agents import create_pandas_dataframe_agent
 from langchain_experimental.agents import create_pandas_dataframe_agent
-from dotenv import load_dotenv
+import streamlit as st
+#from dotenv import load_dotenv
 
-load_dotenv()
-openai_api_key = os.getenv("OPENAI_API_KEY")
+#load_dotenv()
+#openai_api_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 def ask_llm_question(df, question):
     if not openai_api_key:
