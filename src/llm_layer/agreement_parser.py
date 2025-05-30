@@ -15,7 +15,7 @@ def extract_rules_from_text(text):
 You are a compliance analyst for a credit fund. Extract structured rules from the following warehouse or loan buyer agreement section.
 
 Text:
-"""{agreement_text}"""
+{agreement_text}
 
 Return a Python dictionary with keys like:
 - eligibility_criteria
@@ -31,7 +31,7 @@ def generate_code_from_rules(rules_text):
     prompt = PromptTemplate.from_template("""
 You are a credit risk engineer. Write Python functions to implement the following rules:
 
-"""{rules_yaml}"""
+{rules_yaml}
 
 Include functions like:
 - is_loan_eligible(loan)
