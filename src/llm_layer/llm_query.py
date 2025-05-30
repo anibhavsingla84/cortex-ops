@@ -2,7 +2,8 @@
 import pandas as pd
 import os
 from langchain.chat_models import ChatOpenAI
-from langchain.agents import create_pandas_dataframe_agent
+#from langchain.agents import create_pandas_dataframe_agent
+from langchain_experimental.agents import create_pandas_dataframe_agent
 from dotenv import load_dotenv
 
 load_dotenv()
