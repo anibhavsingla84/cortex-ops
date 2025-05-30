@@ -22,7 +22,13 @@ st.title("CortexOps - Loan Ops Intelligence Prototype")
 uploaded_file = st.file_uploader("Upload Loan Tape CSV", type="csv")
 if uploaded_file is not None:
     file_path = f"/mnt/data/{uploaded_file.name}"
+    with open(file_path, "wb") as f:
+        f.write(uploaded_file.getbuffer())
+
     df = pd.read_csv(file_path)
+    st.success(f"✅ File uploaded and read successfully: {uploaded_file.name}")
+    #file_path = f"/mnt/data/{uploaded_file.name}"
+    #df = pd.read_csv(file_path)
     st.subheader("Raw Loan Tape Preview")
     st.dataframe(df.head())
    
