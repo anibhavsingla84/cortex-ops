@@ -5,3 +5,5 @@ streamlit
 openai
 langchain
 plotly
+langchain-community
+numpy
