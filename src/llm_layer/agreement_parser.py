@@ -2,11 +2,14 @@
 import re
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
-from dotenv import load_dotenv
-import os
+#from dotenv import load_dotenv
+#import os
 
-load_dotenv()
-openai_api_key = os.getenv("OPENAI_API_KEY")
+#load_dotenv()
+#openai_api_key = os.getenv("OPENAI_API_KEY")
+import streamlit as st
+
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 llm = ChatOpenAI(model="gpt-4", temperature=0, openai_api_key=openai_api_key)
 
