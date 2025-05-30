@@ -21,7 +21,8 @@ st.title("CortexOps - Loan Ops Intelligence Prototype")
 
 uploaded_file = st.file_uploader("Upload Loan Tape CSV", type="csv")
 if uploaded_file is not None:
-    file_path = f"/mnt/data/{uploaded_file.name}"
+    file_path = os.path.join("/mnt/data", uploaded_file.name)
+    #file_path = f"/mnt/data/{uploaded_file.name}"
     with open(file_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
 
