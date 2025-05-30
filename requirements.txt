@@ -1,0 +1,7 @@
+duckdb
+pandas
+polars
+streamlit
+openai
+langchain
+plotly
