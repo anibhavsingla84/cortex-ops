@@ -7,3 +7,4 @@ langchain
 plotly
 langchain-community
 numpy
+langchain-experimental
