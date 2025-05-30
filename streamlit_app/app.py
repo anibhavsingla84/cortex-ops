@@ -2,14 +2,17 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from src.waterfall_engine import waterfall_engine
-from src.compliance_checks import checks
-from src.compliance_checks import trigger_simulation
-from src.reporting import lp_report
-from src.llm_layer import llm_query
-from src.llm_layer import agreement_parser
-from src.forecast_engine import forecast
-from src.audit import audit_logger
+import sys
+import os
+sys.path.append(os.path.abspath("src"))
+from waterfall_engine import waterfall_engine
+from compliance_checks import checks
+from compliance_checks import trigger_simulation
+from reporting import lp_report
+from llm_layer import llm_query
+from llm_layer import agreement_parser
+from forecast_engine import forecast
+from audit import audit_logger
 from streamlit_app.tabs import segment_analysis_tab
 
 st.set_page_config(layout="wide")
