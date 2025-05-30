@@ -13,7 +13,8 @@ from llm_layer import llm_query
 from llm_layer import agreement_parser
 from forecast_engine import forecast
 from audit import audit_logger
-from streamlit_app.tabs import segment_analysis_tab
+#from streamlit_app.tabs import segment_analysis_tab
+from tabs import segment_analysis_tab
 
 st.set_page_config(layout="wide")
 st.title("CortexOps - Loan Ops Intelligence Prototype")
