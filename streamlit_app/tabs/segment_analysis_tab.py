@@ -1,7 +1,8 @@
 
 import streamlit as st
 import pandas as pd
-from src.analytics import segment_analysis
+#from src.analytics import segment_analysis
+from analytics import segment_analysis
 
 def run_segment_analysis_tab(df):
     st.subheader("📊 Cohort & Segment Performance")
