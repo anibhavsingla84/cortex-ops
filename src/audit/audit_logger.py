@@ -2,7 +2,8 @@
 from datetime import datetime
 import pandas as pd
 
-audit_log_path = "/mnt/data/CortexOps_Prototype/audit_trail.csv"
+#audit_log_path = "/mnt/data/CortexOps_Prototype/audit_trail.csv"
+audit_log_path = "/mnt/data/audit_trail.csv"
 
 def log_event(event_type, action, affected_loans="All", notes=""):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
